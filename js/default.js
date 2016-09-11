@@ -14,6 +14,5 @@
 
 //this will create a default loading icon until the page loads completely.
 dyloadly.init({
-    target : "#dyloadly-container",
-    filepath : "./image/64/spinner-1.gif"
+    filepath : "./image/120/pacman.gif"
 });

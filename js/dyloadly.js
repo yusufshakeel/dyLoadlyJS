@@ -46,7 +46,6 @@
      * this function will initialize dyloadly.
      *
      * option = {
-     *  target : "string"       //(mandatory) id of a div container
      *  filepath : "string"     //(mandatory) path of the image file to be used
      * }
      */
@@ -59,15 +58,18 @@
         }
 
         var
-            //default settings
-            defaults = {};
+            div;
 
-        option = extendSource(option, defaults);
+        div = $("<div>", {
+                    "class" : "dyloadly-container",
+                    "id" : "dyloadly-container"
+                });
+        $("body").prepend(div);
 
-        $(option.target).css("background-image", "url('" + option.filepath + "')");
+        $(".dyloadly-container").css("background-image", "url('" + option.filepath + "')");
 
         $(window).load(function () {
-            $(option.target).fadeOut("slow");
+            $("#dyloadly-container").fadeOut("slow");
         });
 
     };
