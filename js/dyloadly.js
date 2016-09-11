@@ -73,7 +73,7 @@
     };
 
 
-    //------------------------------ dyloadly.config() ends here ------------
+    //------------------------------ dyloadly.init() ends here ------------
 
 
     //attach to global window object
